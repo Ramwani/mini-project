@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:id="@+id/mainlayout">
+
+    <EditText
+
+        android:inputType="text"
+        android:textSize="20sp"
+        android:id="@+id/description"
+        android:hint="Event "
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"/>
+    <EditText
+
+        android:inputType="text"
+        android:textSize="20sp"
+        android:id="@+id/dept"
+        android:hint="Department"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="Date"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+    <DatePicker
+        android:calendarTextColor="@color/purple_700"
+        android:id="@+id/date_picker"
+        android:layout_width="match_parent"
+        android:layout_height="120dp" />
+
+    <TextView
+    android:textColor="@color/black"
+    android:textSize="20sp"
+    android:text="Time"
+    android:layout_width="1000dp"
+    android:layout_height="40dp"/>
+    <TimePicker
+        android:id="@+id/time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"/>
+
+    <Button
+        android:layout_gravity="center"
+        android:id="@+id/con"
+        android:text="continue"
+        android:layout_width="150dp"
+        android:layout_height="50dp"/>
+
+
+</LinearLayout>

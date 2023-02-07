@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Seminar Hall Name" />
+        <EditText
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:id="@+id/capacity"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Capacity of the Seminar hall" />
+
+        <EditText
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:id="@+id/location"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Location of the Seminar hall" />
+
+        <EditText
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Description" />
+
+        <Button
+            android:id="@+id/addSeminarHall"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add Seminar Hall" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="226dp"
+                android:layout_height="145dp"
+                android:layout_margin="1dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/uploadPic"
+                android:layout_width="wrap_content"
+                android:layout_height="78dp"
+                android:layout_marginLeft="20dp"
+                android:text="Upload Pic" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tv_booking_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Booking Details:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_hall_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hall Name:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_hall_name_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_booking_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Booking Date:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_booking_date_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btn_cancel_booking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Cancel Booking" />
+
+</LinearLayout>
