@@ -74,7 +74,7 @@ public class SignupActivity extends AppCompatActivity {
                                 binding.role.setText("");
                                 binding.password.setText("");
 
-                                Role rolee = new Role(authResult.getUser().getUid().toString(),username.toString(),department.toString(),email.toString(),role.toString());
+                                Role rolee = new Role(authResult.getUser().getUid().toString(),username.toString(),department.toString(),email.toString(),role.toString(),true);
                                 System.out.println(authResult.getUser().getUid());
                                 FirebaseFirestore.getInstance()
                                         .collection("user")

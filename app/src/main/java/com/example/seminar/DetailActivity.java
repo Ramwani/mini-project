@@ -53,7 +53,7 @@ public class DetailActivity extends AppCompatActivity {
 
                 //showBottomSheet();
                 //bookDetail();
-                startActivity(new Intent(DetailActivity.this,BookingDetailsActivity.class));
+                startActivity(new Intent(DetailActivity.this,BookingActivity.class));
                 finish();
 
             }

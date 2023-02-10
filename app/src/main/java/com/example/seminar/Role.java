@@ -1,15 +1,32 @@
 package com.example.seminar;
 
-public class Role {
+import java.io.Serializable;
+import java.util.Date;
+
+public class Role implements Serializable {
 
     private String uid,username,department,email,role;
 
-    public Role(String uid, String username, String department, String email, String role) {
+    private boolean show;
+
+    public Role() {
+    }
+
+    public Role(String uid, String username, String department, String email, String role, boolean show) {
         this.uid = uid;
         this.username = username;
         this.department = department;
         this.email = email;
         this.role = role;
+        this.show=show;
+    }
+
+    public boolean isShow() {
+        return show;
+    }
+
+    public void setShow(boolean show) {
+        this.show = show;
     }
 
     public String getUid() {

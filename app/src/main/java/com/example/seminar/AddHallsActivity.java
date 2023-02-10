@@ -1,11 +1,14 @@
 package com.example.seminar;
 
+import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +29,8 @@ public class AddHallsActivity extends AppCompatActivity {
     private String id,title,description,capacity,location;
     private Uri uri;
 
+    ActivityResultLauncher<Intent> activityResultLauncher;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +48,16 @@ public class AddHallsActivity extends AppCompatActivity {
             }
         });
 
+        activityResultLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                if(result.getResultCode()==RESULT_OK && result.getData()!=null){
+                    Bundle bundle=result.getData().getExtras();
+                }
+
+            }
+        });
+
 
 
 
@@ -52,7 +67,9 @@ public class AddHallsActivity extends AppCompatActivity {
                 Intent intent=new Intent(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
                 intent.putExtra(Intent.EXTRA_LOCAL_ONLY,true);
-                //startActivityForResult(intent.createChooser(intent,"Select the image"),100);
+                activityResultLauncher.launch(intent);
+
+               // startActivityForResult(intent.createChooser(intent,"Select the image"),100);
             }
         });
         binding.uploadPic.setOnClickListener(new View.OnClickListener() {

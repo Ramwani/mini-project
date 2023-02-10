@@ -4,12 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailActivity"
+    tools:context=".UserDeatailsActivity"
     android:orientation="vertical">
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="300dp"/>
+
     <LinearLayout
         android:padding="10dp"
         android:orientation="vertical"
@@ -20,20 +17,15 @@
             android:layout_gravity="center"
             android:textColor="@color/white"
             android:textSize="30sp"
-            android:text="Seminar Hall Details"
+            android:text="User Details"
             android:background="@color/orange"
             android:layout_width="match_parent"
             android:layout_height="48dp"/>
 
     </LinearLayout>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></LinearLayout>
-
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentStart="true"
@@ -42,26 +34,26 @@
         android:layout_marginStart="0dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="377dp"
-        android:text="This is name"
+        android:text="User Name"
         android:textColor="@color/orange"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/capacity"
+        android:id="@+id/useremail"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
         android:layout_marginBottom="331dp"
-        android:text="Capacity"
+        android:text="Email:"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="normal" />
 
     <TextView
-        android:id="@+id/location"
+        android:id="@+id/department"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentStart="true"
@@ -69,29 +61,29 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="2dp"
         android:layout_marginBottom="286dp"
-        android:text="Loaction"
+        android:text="Department:"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="normal" />
 
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/userrole"
         android:layout_width="match_parent"
-        android:layout_height="201dp"
+        android:layout_height="47dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="95dp"
-        android:text="Description"
+        android:layout_marginBottom="249dp"
+        android:text="Role:"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="normal" />
 
     <Button
-        android:id="@+id/book"
+        android:id="@+id/deleteUser"
         android:layout_width="187dp"
 
-        android:text="BOOK"
+        android:text="Delete"
 
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
