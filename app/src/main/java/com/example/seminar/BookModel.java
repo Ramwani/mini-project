@@ -15,11 +15,13 @@ public class BookModel {
 
     private String hallName;
 
+    private boolean show;
+
     public BookModel() {
 
     }
 
-    public BookModel(String id, String event, String department, String username, String date, String time, String hallName,String duration) {
+    public BookModel(String id, String event, String department, String username, String date, String time, String hallName, String duration, boolean show) {
         this.duration=duration;
         this.id=id;
         this.event = event;
@@ -28,6 +30,7 @@ public class BookModel {
         this.date = date;
         this.time = time;
         this.hallName = hallName;
+        this.show=show;
     }
 
     public BookModel(String id, String event, String dept,String duration, String date, String time) {
@@ -37,6 +40,14 @@ public class BookModel {
         this.department=dept;
         this.date=date;
         this.time=time;
+    }
+
+    public boolean isShow() {
+        return show;
+    }
+
+    public void setShow(boolean show) {
+        this.show = show;
     }
 
     public String getDuration() {

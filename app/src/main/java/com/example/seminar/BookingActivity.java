@@ -15,7 +15,7 @@ import java.util.UUID;
 
 public class BookingActivity extends AppCompatActivity {
     ActivityBookingBinding binding;
-    private String id,event,dept,duration,date,time,hallName;
+    private String id,event,dept,duration,date,time,hallName,name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class BookingActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         String name = FirebaseAuth.getInstance().getCurrentUser().getDisplayName().toString();
+       // String hallName= String.valueOf(FirebaseFirestore.getInstance().collection(getCurrentFocus().toString()));
 
         binding.proceed.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,7 +46,7 @@ public class BookingActivity extends AppCompatActivity {
                 progressDialog.setMessage("Seminar Hall");
                 progressDialog.show();
 
-                BookModel bookModel= new BookModel(id,event,dept,duration,date,time,name,hallName);
+                BookModel bookModel= new BookModel(id,event,dept,duration,date,time,name,hallName,true);
                 FirebaseFirestore.getInstance()
                         .collection("Bookings")
                         .document(id)
